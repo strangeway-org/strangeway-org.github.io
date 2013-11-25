@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
     <head>
-        <title>OpenStreetMap Roller Tracks</title>
+        <title>OpenStreetMap Leaflet JS Example</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css"/>
         <!--[if lte IE 8]>
@@ -36,7 +36,6 @@
 
             // [2]. Setup tiles
 
-            // My cloud made: 'http://api.tiles.mapbox.com/v3/jreznot.map-jl85c3du/{z}/{x}/{y}.png'
             // MapSurfer: 'http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}'
             // OSM: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
             L.tileLayer('http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}', {
@@ -76,7 +75,7 @@
 
                 iconSize:     [16, 16], // size of the icon
                 iconAnchor:   [8, 8], // point of the icon which will correspond to marker's location
-                popupAnchor:  [10, -16] // point from which the popup should open relative to the iconAnchor
+                popupAnchor:  [0, -8] // point from which the popup should open relative to the iconAnchor
             });
 
             var marker = L.marker(
