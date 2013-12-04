@@ -17,12 +17,9 @@
 
         <script type="text/javascript">
             $(function () {
-                $.getJSON('data.json', function (data) {
+                $.getJSON('time.json', function (data) {
                     var seriesData = [];
                     $.each(data, function (key, val) {
-                        if (val.name.indexOf('mem1T,tmp,qdr') >= 0)
-                            return;
-
                         var rowData = [];
 
                         $.each(val.points, function (pointKey, pointVal) {
@@ -35,8 +32,7 @@
                         seriesData.push({
 //                            type: 'area',
                             name: val.name,
-                            data: rowData,
-                            visible: val.name.indexOf('[~]') < 0
+                            data: rowData
                         });
                     });
 
@@ -73,7 +69,7 @@
                         },
                         yAxis: {
                             title: {
-                                text: 'Занятые узлы'
+                                text: 'Суммарное время задач по очередям'
                             }
                         },
                         series: seriesData
