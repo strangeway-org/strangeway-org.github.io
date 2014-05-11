@@ -24,7 +24,7 @@
 
                         $.each(val.points, function (pointKey, pointVal) {
                             rowData.push([
-                                new Date(pointVal.timeStamp),
+                                pointVal.timeStamp,
                                 pointVal.value
                             ]);
                         });
