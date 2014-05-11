@@ -68,6 +68,20 @@
                             }
                         },
                         yAxis: {
+                            plotLines: [{
+                                color: 'blue',
+                                width: 2,
+                                value: 3600 * 164,
+                                dashStyle: 'longdashdot',
+                                label: {
+                                    text: 'Суммарное время задач в очереди 1 час',
+                                    align: 'right',
+                                    style: {
+                                        color: 'red',
+                                        fontWeight: 'bold'
+                                    }
+                                }
+                            }],
                             title: {
                                 text: 'Суммарное время задач по очередям, с'
                             }
